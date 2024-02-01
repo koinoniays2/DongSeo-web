@@ -14,4 +14,6 @@
 header,footer 더잠실체, body 세종병원체
 ---
 ## 실행화면
-[동서한약-dothome](http://koinonia.dothome.co.kr/ds-prj/index.html)
+[동서한약-dothome](http://koinonia.dothome.co.kr/ds-prj/index.html)  
+[동서한약-github](https://koinoniays2.github.io/DongSeo-web/)  
+[동서한약-netlify](https://fanciful-cassata-62883f.netlify.app/)  
