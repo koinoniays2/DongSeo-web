@@ -1,0 +1,186 @@
+/* 헤더 */
+#header {
+    width: 100%; padding: 16px 0;
+    position: fixed; top: 0; left: 0; z-index: 99;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    font-family: 'TheJamsil5';
+    transition-duration: 1s;
+}
+/* 토글 메뉴 */
+#toggle-menu {
+    width: 100%;
+    display: none;
+}
+#toggle-menu > ul:nth-child(1) {
+    display: flex; justify-content: flex-end;
+    width: 90%;
+}
+#toggle-menu > ul:nth-child(1) > li {
+    padding: 16px 16px;
+}
+#toggle-menu > ul:nth-child(1) > li > a {
+    color: #F6F6F6;
+    font-size: 0.625rem;
+}
+#toggle-menu > ul:nth-child(2) {
+    display: flex;  flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+#toggle-menu > ul:nth-child(2) > li {
+    padding: 16px 0;
+}
+#toggle-menu > ul:nth-child(2) > li > a {
+    color: #F6F6F6;
+}
+/* 토글메뉴 클릭 시 로고, 메뉴, 백그라운드 색상 설정 클래스*/
+#header.menuon {
+    background-color: rgba(246, 246, 246, 0.9);
+}
+#header.menuon #logo a,
+#header.menuon #toggle-menu ul li a,
+#header.menuon #toggle-on i {
+    color: #2457BD;
+}
+
+/* 피씨 메뉴 */
+    #header nav { 
+        width: 90%;
+        display: flex; justify-content: space-between;
+    }
+    #logo {
+        display: flex; align-items: center;
+    }
+    /* 메인 메뉴 */
+    #main-menu {
+        display: none; align-items: center;
+        flex-grow: 1;
+    }
+    #main-menu > ul {
+        display: flex; width: 100%;
+        justify-content: center;
+    }
+    #main-menu > ul > li {
+        text-align: center;
+    }
+    #main-menu > ul > li > a {
+        display: block;
+        padding: 0 24px; text-align: center;
+    }
+    /* 로그인 메뉴 */
+    #login-menu {
+        display: none; align-items: center; justify-content: center;
+    }
+    #login-menu > ul {
+        display: flex; 
+    }
+    #login-menu > ul > li > a{
+        display: block;
+        padding: 0 8px; font-size: 0.625rem;
+    }
+
+    /* 텍스트 컬러 */
+    #main-menu > ul > li > a, #login-menu > ul > li > a {
+        color: #F6F6F6;
+    }
+    #header #logo > a, #header #toggle-on i {
+        color: #F6F6F6; font-size: 1.5rem;
+        cursor: pointer;
+        transition: var(--font-transition);
+    }
+    #header ul li:hover {
+        transform: scale(1.2);
+        transition-duration: 0.5s;
+    }
+
+/* 비디오 */
+#video-container {
+    position: relative;
+    width: 100%; height: 100vh;
+    overflow: hidden;
+}
+#video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+#overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+	mix-blend-mode: darken;
+	background-color: #353535;
+    opacity: 0.5;
+}
+/* #overlay span {
+    color: black;
+    font-size: 3rem;
+    font-family: 'Black Han Sans', sans-serif;
+} */
+#text-container {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+}
+#text-container span {
+    display: inline-block;
+    color: #F6F6F6;
+    font-size: 2rem; font-weight: bold;
+    line-height: 3rem;
+    transition: var(--font-transition);
+}
+#scroll {
+    position: absolute; bottom: 0; left: 0;
+    width: 100%; display: flex; justify-content: center;
+    margin-bottom: 20px;
+}
+#scroll i {
+    color: #F6F6F6; margin-left: 5px;
+    animation: scrollAni 1.5s infinite;
+    transition: var(--font-transition);
+}
+#scroll span {
+    color: #F6F6F6;
+    transition: var(--font-transition);
+}
+@keyframes scrollAni {
+    0% {
+        transform: translate(0, -5px);
+    }
+    50% {
+        transform: translate(0, 5px);
+    }
+    100% {
+        transform: translate(0,-5px);
+    }
+}
+/* 헤더 미디어 쿼리 */
+@media screen and (min-width:768px) {
+    #header #logo a, #header #toggle-on i {
+        font-size: 1.8rem;
+    }
+    #header nav { max-width: 1300px; }
+    #header #toggle-on { display: none; }
+    #toggle-menu { display: none !important; }
+    #main-menu { display: flex; }
+    #login-menu { display: flex; }
+}
+/* 비디오 미디어 쿼리 */
+@media screen and (min-width:768px) {
+    #text-container {
+        flex-direction: row;
+    }
+    #text-container span {
+        font-size: 2.5rem;
+    }
+}
+@media screen and (min-width:1024px) {
+    #text-container span {
+        font-size: 3rem;
+    }
+    #scroll i, #scroll span {
+        font-size: 1.5rem;
+    }
+}

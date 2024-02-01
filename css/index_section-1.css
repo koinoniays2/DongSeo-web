@@ -1,0 +1,150 @@
+/* --------------------공통-------------------- */
+/* 섹션 */
+.section { 
+    width: 100%;
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center;
+}
+.section > .title {
+    width: 90%;
+    text-align: center;
+    margin-top: 80px;
+}
+/* 섹션 타이틀 */
+.section > .title > span {
+    display: inline-block; margin-bottom: 16px;
+    color: #2457BD; font-weight: bold;
+    transition: var(--font-transition);
+}
+/* 섹션 슬로건 */
+.section > .title > p { 
+    font-size: 1.5rem; line-height: 2rem; 
+    transition: var(--font-transition);
+}
+/* 섹션-1 */
+/* 줄바꿈용 컨테이너 */
+.section-1 > .wrap {
+    display: flex; flex-wrap: wrap;
+    justify-content: center;
+    width: 90%; margin-top: 56px;
+}
+/* 이미지 그리드 */
+.section-1 .img-container {
+    position: relative;
+    /* overflow: hidden; */
+    display: grid; width: 100%; height: 40vh;
+    max-width: 560px;
+    transition: var(--size-transition);
+    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    grid-template-areas: 
+        "a a b"
+        "c d e"
+}
+.section-1 .img-container .img { width: 100%; height: 100%; overflow: hidden; object-fit: cover; }
+.img1 { grid-area: a; }
+.img2 { grid-area: b; }
+.img3 { grid-area: c; }
+.img4 { grid-area: d; }
+.img5 { grid-area: e; }
+
+/* 그리드 밑 텍스트 */
+.grid-text { 
+    width: 100%;
+    position: absolute;
+    bottom: -32px; left: 50%;
+    transform: translateX(-50%);
+}
+.img-text {
+    width: 100%;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-align: center;
+    font-weight: bolder;
+    color: #8C8C8C;
+    font-size: 0.875rem;
+    transition: var(--font-transition);
+}
+
+/* 그리드 이미지 마우스 오버/아웃 자바스크립트 */
+.show-bg::after {
+    display: block;
+    width: 100%; height: 100%;
+    content: ""; position: absolute; top: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease;
+}
+.section-1 .img-container .img > p { 
+    position: absolute; display: none; 
+    bottom: 50%; right: 50%; transform: translate(50%, 50%);
+    font-weight: bold; color: #F6F6F6;
+    z-index: 99;
+    animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* description */
+.section-1 .description { 
+    margin-top: 80px;
+}
+.section-1 .description p{ 
+    transition: var(--font-transition);
+}
+
+ /* 태블릿 */
+@media screen and (min-width:768px) {
+    .section > .title {
+        margin-top: 120px;
+    }
+    .section > .title > p { 
+        font-size: 1.8rem; line-height: 2.3rem; 
+    }
+    .section .description > p { 
+        font-size: 1.25rem;  padding-left: 16px; }
+    .img-text {
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:1024px) {
+    .section > .title > p { 
+        font-size: 2rem; line-height: 2.5rem; 
+    }
+    .section .description > p { font-size: 1.5rem; }
+    /* max-width */
+    .section-1 .title, .section-1 .wrap, .section-1 .description
+    { max-width: 1300px; }
+    /* section-1 */
+    .section-1 .wrap { align-items: center; }
+    .section-1 .img-container { width: 50%; height: 60vh; }
+    .img-text {
+        font-size: 1.125rem;
+    }
+}
+/* ------------------------------------------------------------ */
+/* 백그라운드 이미지 */
+.bg-img {
+    margin-top: 80px;
+    width: 100%; height: 40vh;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.bg-img::after {
+    content: "";
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; right: 0;
+    background-image: url("../images/section1-도라지꽃.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+@media screen and (min-width:768px) {
+    .bg-img {
+        margin-top: 120px;
+    }
+}

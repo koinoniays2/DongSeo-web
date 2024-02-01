@@ -1,0 +1,78 @@
+/* 섹션-2 책 컨테이너*/
+#book-container {
+    width: 90%; height: 50vh;
+    margin-top: 56px;
+    margin-bottom: 80px;
+    position: relative;
+    perspective: 1000px;
+    transition: var(--size-transition);
+}
+/* 책 겹치기 */
+#book-container > .page {
+    height: 100%; position: absolute; 
+    top: 0; left: 50%;
+}
+/* 책 이미지 */
+#book-container > .page > img {
+    width: 100%; height: 100%; object-fit: contain;
+}
+/* 책 표지 */
+#book-container > #page-1 {
+    /* left : 변환의 기준점이 요소의 왼쪽 가장자리 center : 수직 방향의 중앙 */
+    transform-origin: left center; 
+    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+    cursor: pointer; z-index: 1;
+}
+/* 책 표지 클릭 시 펼쳐짐 자바스크립트 */
+.clicked {
+    transform: rotateY(-180deg);
+    opacity: 0.2;
+}
+/* 책 텍스트 배경 */
+#book-container > #page-2 > img {
+    opacity: 0.1;
+}
+/* 텍스트 영역 */
+#book-container > .book-text {
+    position: absolute; top: 0; right: 0;
+    height: 100%; width: 100%;
+    display: flex; align-items: center; justify-content: center;
+}
+#book-container > .book-text > p {
+    transform: scale(0);
+    transition: transform 0.8s ease-out , font-size 1.2s ease;
+    z-index: 99;
+}
+/* 클릭 버튼 */
+.book-click {
+    position: absolute;
+    top:50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem; font-weight: bold;
+    animation: move-the-sign 1.5s infinite;
+}
+.book-click > span > i {
+    color: #a3ccf4;
+}
+/* 클릭 버튼 모션 */
+@keyframes move-the-sign {
+    0% {
+        transform: translate(-100px, 0); opacity: 0;
+    }
+    50% {
+        transform: translate(-90px, 0); opacity: 1;
+    }
+    100% {
+        transform: translate(-100px, 0); opacity: 0;
+    }
+}
+/* 섹션-2 미디어 쿼리 */
+@media screen and (min-width:768px) {
+    #book-container { 
+        max-width: 1300px; 
+        margin-bottom: 120px;
+    }
+    #book-container > .book-text > p {
+        font-size: 1.5rem;
+    }
+}

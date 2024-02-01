@@ -1,0 +1,23 @@
+#footer {
+    width: 100%;
+    padding: 32px 0;
+    display: flex; justify-content: center;
+    border-top: 2px solid #2457BD;
+}
+.footer-wrap {
+    width: 90%;
+    display: flex; flex-wrap: wrap;
+    align-items: center; justify-content: space-evenly;
+    font-family: 'TheJamsil5';
+}   
+    .footer-wrap > .title { margin-bottom: 16px; }
+    .footer-wrap > .title a { display: flex; align-items: flex-end; }
+    .footer-wrap > .title span { color: #2457BD; font-size: 1.5rem; }
+    .footer-wrap > .text-container { display: flex; flex-direction: column; }
+    .footer-wrap > .text-container > p {
+        padding: 0px 5px 5px 5px;
+        color: #353535; font-size: 0.875rem;
+    }
+    .footer-wrap > .text-container > p > i {
+        color: #2457BD; padding-right: 10px;
+    }

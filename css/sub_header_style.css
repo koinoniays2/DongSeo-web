@@ -1,0 +1,147 @@
+#header {
+    width: 100%;
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'TheJamsil5';
+    transition-duration: 1s;
+}
+
+/* 토글 메뉴 */
+#toggle-menu {
+    width: 100%;
+    display: none;
+}
+
+#toggle-menu>ul:nth-child(1) {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+}
+
+#toggle-menu>ul:nth-child(1)>li {
+    padding: 16px 16px;
+}
+
+#toggle-menu>ul:nth-child(1)>li>a {
+    /* color: #F6F6F6; */
+    color: #2457BD;
+    font-size: 0.625rem;
+}
+
+#toggle-menu>ul:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+#toggle-menu>ul:nth-child(2)>li {
+    padding: 16px 0;
+}
+
+#toggle-menu>ul:nth-child(2)>li>a {
+    /* color: #F6F6F6; */
+    color: #2457BD;
+}
+
+/* 피씨 메뉴 */
+#header nav {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+/* 메인 메뉴 */
+#main-menu {
+    display: none;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#main-menu>ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#main-menu>ul>li {
+    text-align: center;
+}
+
+#main-menu>ul>li>a {
+    display: block;
+    padding: 0 24px;
+    text-align: center;
+}
+
+/* 로그인 메뉴 */
+#login-menu {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-menu>ul {
+    display: flex;
+}
+
+#login-menu>ul>li>a {
+    display: block;
+    padding: 0 8px;
+    font-size: 0.625rem;
+}
+
+/* 텍스트 컬러 */
+#main-menu>ul>li>a,
+#login-menu>ul>li>a {
+    color: #2457BD;
+}
+
+#header #logo>a,
+#header #toggle-on i {
+    color: #2457BD;
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* transition: var(--font-transition); */
+}
+
+#header ul li:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+/* 헤더 미디어 쿼리 */
+@media screen and (min-width:768px) {
+
+    #header #logo a {
+        font-size: 1.8rem;
+    }
+
+    #header nav {
+        max-width: 1300px;
+    }
+
+    #header #toggle-on {
+        display: none;
+    }
+
+    #toggle-menu {
+        display: none !important;
+    }
+
+    #main-menu {
+        display: flex;
+    }
+
+    #login-menu {
+        display: flex;
+    }
+}

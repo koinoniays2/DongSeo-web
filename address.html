@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 지도api -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e6541d59197514215349b9b2b616b694"></script>
+    <!-- css -->
+    <link href="css/init.css" rel="stylesheet" type="text/css" />
+    <link href="css/address_map_style.css" rel="stylesheet" type="text/css" />
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/96b5911d82.js" crossorigin="anonymous"></script>
+    <!-- 제이쿼리 -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>지도</title>
+</head>
+<body>
+    <div id="header-container"></div>
+    <section class="section">
+        <div class="address-text">
+            <h1>오시는 길</h1>
+            <div id="liner"></div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="map-container">
+            <div id="map"></div>
+            <div class="address-description">
+                <div>
+                    <h3><i class="fa-solid fa-location-dot"></i>주소</h3>
+                    <p>대구시 북구 산격로9길 17 대성빌딩 1층</p>
+                    <p>• 건물 앞 주차가능</p>
+                </div>
+                <div>
+                    <h3><i class="fa-solid fa-clock"></i>영업 시간</h3>
+                    <p>평&nbsp&nbsp&nbsp&nbsp일&nbsp&nbsp&nbsp오전 09:00 ~ 오후 06:00</p>
+                    <p>토요일&nbsp&nbsp&nbsp오전 09:00 ~ 오후 03:00</p>
+                    <p>일요일&nbsp&nbsp&nbsp휴무</p>
+                </div>
+                <div>
+                    <h3><i class="fa-solid fa-bus"></i>버스</h3>
+                    <p>산격초등학교앞 | 산격초등학교건너 도보 4분</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="footer-container"></div>
+    <!-- js -->
+    <script src="js/address_map_script.js"></script>
+    <script src="js/insert_header_footer.js"></script>
+</body>
+</html>

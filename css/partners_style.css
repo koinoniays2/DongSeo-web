@@ -1,0 +1,61 @@
+.section {
+    display: flex; flex-direction: column; 
+    justify-content: center; align-items: center;
+    width: 100%;
+    margin: 128px 0;
+}
+/* 상단 이미지 */
+#img-container {
+    width: 90%; max-width: 1300px;
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+}
+#img-container img {
+    width: 60px;
+    transition: var(--size-transition);
+}
+.section > p {
+    width: 90%;
+    color: #8C8C8C;
+    font-size: 0.75rem;
+    text-align: center;
+    margin-top: 24px;
+    font-weight: bold;
+}
+/* 캐러샐 */
+.swiper {
+    width: 90%;
+    max-width: 400px;
+    margin: 72px 0;
+}
+.swiper img {
+    width: 100%;
+    padding: 16px;
+    object-fit: contain;
+}
+.swiper-button-prev::after, .swiper-button-next::after {
+    font-size: 1.5rem !important;
+    color : #2457BD !important;
+    font-weight: bold !important;
+}
+.swiper-pagination {
+    bottom: 0 !important;
+}
+/* 하단 텍스트 */
+.description {
+    margin: 0 16px;
+}
+.description p {
+    transition: var(--font-transition);
+    line-height: 1.5rem;
+}
+
+@media screen and (min-width:768px) {
+    .section .description > p { 
+        font-size: 1.25rem;
+        line-height: 1.75rem; }
+}
+@media screen and (min-width:1024px) {
+    #img-container img {
+        width: 70px;
+    }
+}

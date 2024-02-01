@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link href="css/init.css" rel="stylesheet" type="text/css" />
+    <link href="css/index_style.css" rel="stylesheet" type="text/css" />
+    <link href="css/index_header_video.css" rel="stylesheet" type="text/css" />
+    <link href="css/index_section-1.css" rel="stylesheet" type="text/css" />
+    <link href="css/index_section-2.css" rel="stylesheet" type="text/css" />
+    <link href="css/index_section-3.css" rel="stylesheet" type="text/css" />
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/96b5911d82.js" crossorigin="anonymous"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <!-- Black Han Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <!-- 제이쿼리 -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>동서한약</title>
+</head>
+<body>
+    <!-- 로딩 스크린 -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!-- 헤더 -->
+    <header id="header">
+        <nav>
+            <div id="logo">
+                <a href="#">
+                    동 서 한 약
+                </a>
+            </div>
+            <div id="main-menu">
+                <ul>
+                    <li><a href="index.html">업체소개</a></li>
+                    <li><a href="index.html">사상체질</a></li>
+                    <li><a href="partners.html">협력업체</a></li>
+                    <li><a href="address.html">오시는길</a></li>
+                </ul>
+            </div>
+            <div id="login-menu">
+                <ul>
+                    <li><a href="index.html">JOIN</a></li>
+                    <li><a href="index.html">LOGIN</a></li>
+                </ul>
+            </div>
+            <div id="toggle-on">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <div id="toggle-menu">
+            <ul>
+                <li><a href="index.html">JOIN</a></li>
+                <li><a href="index.html">LOGIN</a></li>
+            </ul>
+            <ul>
+                <li><a href="index.html">업체소개</a></li>
+                <li><a href="index.html">사상체질</a></li>
+                <li><a href="partners.html">협력업체</a></li>
+                <li><a href="address.html">오시는길</a></li>
+            </ul>
+        </div>
+    </header>
+    <section id="video-container">
+        <video id="video" autoplay loop muted>
+            <source src="images/녹용.mp4" type="video/mp4"/>
+        </video>
+        <div id="overlay"></div>
+        <div id="text-container">
+            <span>기원과 동행하는,&nbsp</span>
+            <span>동서한약</span>
+        </div>
+        <div id="scroll">
+            <span>Scroll</span>
+            <i class="fa-solid fa-angles-down"></i>
+        </div>
+    </section>
+    <!-- ------------섹션-1------------------------------------ -->
+    <section class="section section-1" id="intro">
+        <!-- 타이틀 -->
+        <article class="title">
+            <span>D</span>
+            <span>O</span>
+            <span>N</span>
+            <span>G</span>
+            <span>S</span>
+            <span>E</span>
+            <span>O</span>
+            <p>정직함을 기반으로</p>
+            <p>정확함을 선사합니다.</p>
+        </article>  
+        <!-- 이미지 -->
+        <div class="wrap">
+            <article class="img-container">
+                <div class="img img1">
+                    <img class="img" src="images/section1-황기.png" alt="황기" />
+                    <p>황기<br />
+                    -3년근<br />
+                    -8년근</p>
+                </div>
+                <div class="img img2">
+                    <img class="img" src="images/section1-길경-s.png" alt="길경" />
+                    <p>길경<br />
+                    -6년근<br />
+                    -4년근</p>
+                </div>
+                <div class="img img3">
+                    <img class="img" src="images/section1-신이.png" alt="신이" />
+                    <p>신이</p>
+                </div>
+                <div class="img img4">
+                    <img class="img" src="images/section1-곽향.png" alt="곽향"/>
+                    <p>곽향</p>
+                </div>
+                <div class="img img5">
+                    <img class="img" src="images/section1-금은화.png" alt="금은화"/>
+                    <p>금은화</p>
+                </div>
+                <article class="grid-text">
+                    <p class="img-text">"300여 가지의 약재들을 다루고 있습니다."</p>
+                </article>
+            </article>
+            <!-- 텍스트-2 -->
+            <article class="description">
+                <p><b>동서한약</b>은<br /><br />
+                    직접 검증하지 않은 제품은 판매하지 않고,<br />
+                    선별된 제품들만 제공하고 있습니다.</p>
+            </article>
+        </div>
+        <div class="bg-img"></div>
+    </section>
+    <!-- ------------섹션-2------------------------------------ -->
+    <section class="section section-2" id="sasang">
+        <!-- 타이틀 -->
+        <article class="title">
+            <span>O</span>
+            <span>U</span>
+            <span>R&nbsp&nbsp</span>
+            <span>P</span>
+            <span>R</span>
+            <span>O</span>
+            <span>M</span>
+            <span>I</span>
+            <span>S</span>
+            <span>E</span>
+            <p>신뢰를 약속드리기 위한</p>
+            <p>동서만의 방식</p>
+        </article>
+        <article id="book-container">
+            <div class="book-text">
+                <p>
+                    <b>"새로쓴 사상의학"</b>을 바탕으로<br /><br />
+                    한의원 처방에 맞는<br />
+                    맞춤형 재료를 제공합니다.
+                </p>
+            </div>
+            <div class="page" id="page-1">
+                <img src="https://image.yes24.com/goods/8920180/XL" alt="새로쓴 사상의학"/>
+            </div>
+            <div class="page" id="page-2">
+                <img src="https://image.yes24.com/goods/8920180/XL" alt="새로쓴 사상의학"/>
+            </div>
+            <div class="book-click">
+                <span>Click <i class="fa-solid fa-angles-right"></i></span>
+            </div>
+        </article>
+    </section>
+    <!-- ------------섹션-3------------------------------------ -->
+    <section class="section section-3" id="partner">
+        <div id="partners-t-img"></div>
+        <div id="partners">
+            <p>P A R T N E R S</p>
+            <div class="logo-container">
+                <div>
+                    <img src="images/옴니허브.png" alt="옴니허브 로고"/>
+                </div>
+                <div>
+                    <img src="images/바이오닷.png" alt="바이오닷 로고"/>
+                </div>
+                <div>
+                    <img src="images/휴먼허브.png" alt="휴면허브 로고"/>
+                </div>
+                
+            </div>
+        </div>
+        <article class="description">
+            <p>믿을 수 있는 파트너 회사와 협력하여&nbsp<br /><b>우수한 품질</b>을 가진 제품만을 엄선합니다.&nbsp</p><br /><br />
+            <p>이를 통해 안정성과&nbsp<br />높은 만족도를 제공하고 있습니다.</p>
+        </article>
+        <div id="partners-b-img"></div>
+    </section>
+    <!-- ------------푸터------------------------------------ -->
+    <footer id="footer">
+        <article class="footer-wrap">
+            <div class="title">
+                <a href="#">
+                    <img src="images/logo.svg" alt="logo" />
+                    <span>동 서 한 약</span>
+                </a>
+            </div>
+            <div class="text-container">
+                <p>대표 : 김 건 영</p>
+                <p>대구시 북구 산격로9길 17 대성빌딩 1층</p>
+                <p>사업자 등록번호 : 882-46-000-69</p>
+            </div>
+            <div class="text-container">
+                <p><i class="fa-solid fa-phone"></i>TEL : 053-951-1075 | 010-6519-1902</p>
+                <p><i class="fa-solid fa-fax"></i>FAX : 053-951-1076</p>
+                <p><i class="fa-solid fa-envelope"></i>E-mail : hd1075@hanmail.net</p>
+            </div>
+        </article>
+    </footer>
+    <!-- ------------탑버튼------------------------------------ -->
+    <div id="top-btn"><a href="#"><i class="fa-solid fa-angles-up"></i></a></div>
+    <!-- JS -->
+    <script src="js/index_script.js"></script>
+    <script src="js/index_windowLoad.js"></script>
+</body>
+</html>

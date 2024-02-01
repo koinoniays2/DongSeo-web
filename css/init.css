@@ -1,0 +1,18 @@
+/* --------------------초기화-------------------- */
+* { margin: 0; padding: 0; box-sizing: border-box;
+    list-style: none; text-decoration: none; color: #353535;
+    }
+    :root {
+        --font-transition: font-size 1s ease;
+        --size-transition: height 1s ease, width 1s ease;
+    }
+    body { background-color: #F6F6F6; font-family: 'Sejonghospital'; }
+    /* --------------------폰트-------------------- */
+    @font-face {
+        font-family: 'Sejonghospital';
+        src: url('../fonts/Sejong\ hospital\ Light.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'TheJamsil5';
+        src: url('../fonts/The\ Jamsil\ 3\ Regular.ttf') format('truetype');
+    }

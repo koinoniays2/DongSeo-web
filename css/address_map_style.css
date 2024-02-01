@@ -1,0 +1,46 @@
+.section {
+    width: 100%; 
+    display: flex; justify-content: center; align-items: center;
+}
+.address-text {
+    width: 90%;
+    max-width: 1300px;
+    margin-top: 128px;
+    display: flex; flex-direction: column; align-items: flex-start;
+}
+.address-text h1 {
+    padding: 8px 0;
+}
+.address-text #liner {
+    width: 100%; height: 1px;
+    border: 1px solid black;
+}
+.map-container {
+    width: 90%;
+    max-width: 1300px;
+    display: flex; flex-direction: column;
+    margin-top: 32px;
+}
+#map {
+    width: 100%; height: 50vh;
+}
+.address-description {
+    margin-top: 16px; margin-bottom: 64px;
+    display: flex; flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.address-description > div {
+    width: 300px;
+}
+.address-description i {
+    margin-right: 8px; color: #2457BD;
+}
+.address-description h3 {
+    margin: 16px 0;
+}
+.address-description p {
+    margin-bottom: 8px;
+}
+#footer-container {
+    margin-top: 56px;
+}
