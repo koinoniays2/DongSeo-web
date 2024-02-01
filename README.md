@@ -12,6 +12,27 @@
 배경색 F6F6F6, 글자색 353535, 강조색 $\bf{\large{\color{#2457BD}2457BD}}$
 - FONT  
 header,footer 더잠실체, body 세종병원체
+- LOGO  
+![logo](https://github.com/koinoniays2/DongSeo-web/assets/150204668/cdb28f45-5b69-430d-8730-afd58cb28753)  약재를 생각했을 때, 대표적으로 떠오르는 약재 주전자, 육계, 감초를 표현
+# 그리드
+- Mobile  
+**중단점** : 360px  
+**Gutter** : 16px  
+**Margin** : 16px  
+**Columns** : 4row  
+**Columns Width** : 70px
+- Tablet  
+**중단점** : 768px  
+**Gutter** : 24px  
+**Margin** : 20px  
+**Columns** : 8row  
+**Columns Width** : 70px  
+- PC  
+**중단점** : 1024px  
+**Gutter** : 24px  
+**Margin** : 20px  
+**Columns** : 12row  
+**Columns Width** : 60px
 ---
 ## 실행화면
 [동서한약-dothome](http://koinonia.dothome.co.kr/ds-prj/index.html)  
